@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Vaccination_Record.belongsTo(models.Baby, {
         foreignKey: 'baby_id'
+      });
+      Vaccination_Record.belongsTo(models.Vaccine, {
+        foreignKey: 'vaccine_id'
       })
     }
   }

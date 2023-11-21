@@ -19,7 +19,13 @@ module.exports = {
         onDelete: 'CASCADE',
       },
       vaccine_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Vaccines',
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       grant_date: {
         type: Sequelize.DATEONLY
