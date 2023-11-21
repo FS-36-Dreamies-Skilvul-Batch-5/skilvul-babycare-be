@@ -24,6 +24,9 @@ module.exports = (sequelize, DataTypes) => {
     growth_date: DataTypes.DATEONLY
   }, {
     sequelize,
+    timestamps: false,
+    createdAt: false,
+    updatedAt: false,
     modelName: 'Nutrition_Record',
   });
   return Nutrition_Record;
