@@ -25,6 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     role: DataTypes.ENUM('user', 'admin')
   }, {
     sequelize,
+    timestamps: false,
+    createdAt: false,
+    updatedAt: false,
     modelName: 'User',
   });
   return User;

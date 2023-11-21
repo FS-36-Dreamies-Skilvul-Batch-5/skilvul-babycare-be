@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Article.belongsTo(models.Article_Categorie, { 
+      Article.belongsTo(models.Article_Category, { 
         foreignKey: 'category_id'
       });
     }
@@ -26,6 +26,9 @@ module.exports = (sequelize, DataTypes) => {
     posted_on: DataTypes.DATEONLY
   }, {
     sequelize,
+    timestamps: false,
+    createdAt: false,
+    updatedAt: false,
     modelName: 'Article',
   });
   return Article;

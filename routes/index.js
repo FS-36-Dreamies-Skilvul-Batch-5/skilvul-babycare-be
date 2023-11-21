@@ -6,8 +6,8 @@ const route = express.Router();
 // const nutritionRecordRoutes = require("./nutrition-record-route");
 // const vaccinationRecordRoutes = require("./vaccination-record-route");
 // const vaccineRoutes = require("./vaccine-route");
-// const articleRoutes = require("./article-route");
-// const articleCategoryRoutes = require("./article-category-route");
+const articleRoutes = require("./article-route");
+const articleCategoryRoutes = require("./article-category-route");
 
 route.get("/", (req, res) => {
   res.json({
@@ -17,6 +17,11 @@ route.get("/", (req, res) => {
 
 // route.use("/auth", authRoutes);
 // route.use("/users", userRoutes);
-// route.use("/todos", todoRoutes);
+// route.use("/babies", babyRoutes);
+// route.use("/nutrition-records", nutritionRecordRoutes);
+// route.use("/vaccination-records", vaccinationRecordRoutes);
+// route.use("/vaccines", vaccineRoutes);
+route.use("/articles", articleRoutes);
+route.use("/article-categories", articleCategoryRoutes);
 
 module.exports = route;

@@ -22,6 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     information: DataTypes.TEXT
   }, {
     sequelize,
+    timestamps: false,
+    createdAt: false,
+    updatedAt: false,
     modelName: 'Vaccine',
   });
   return Vaccine;

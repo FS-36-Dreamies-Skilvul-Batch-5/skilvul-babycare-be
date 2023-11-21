@@ -29,6 +29,9 @@ module.exports = (sequelize, DataTypes) => {
     birth_date: DataTypes.DATEONLY
   }, {
     sequelize,
+    timestamps: false,
+    createdAt: false,
+    updatedAt: false,
     modelName: 'Baby',
   });
   return Baby;

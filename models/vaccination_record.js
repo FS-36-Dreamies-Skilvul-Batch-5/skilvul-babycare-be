@@ -25,6 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     grant_date: DataTypes.DATEONLY
   }, {
     sequelize,
+    timestamps: false,
+    createdAt: false,
+    updatedAt: false,
     modelName: 'Vaccination_Record',
   });
   return Vaccination_Record;
