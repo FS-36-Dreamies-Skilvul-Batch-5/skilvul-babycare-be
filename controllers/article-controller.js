@@ -26,12 +26,12 @@ module.exports = {
 
       if(article){
         res.status(200).json({
-          message: `Success get article with this id ${req.params.id}`,
+          message: `Success to get article`,
           data: article,
         })
       } else {
         res.status(404).json({
-          message: `There's no article with that id ${req.params.id}`,
+          message: `There's no article with that id`,
         })
       }
     } catch (error) {
