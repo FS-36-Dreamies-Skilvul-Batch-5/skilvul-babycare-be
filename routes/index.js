@@ -2,7 +2,12 @@ const express = require("express");
 const route = express.Router();
 // const authRoutes = require("./auth-route");
 // const userRoutes = require("./user-route");
-// const todoRoutes = require("./todo-route");
+// const babyRoutes = require("./baby-route");
+// const nutritionRecordRoutes = require("./nutrition-record-route");
+// const vaccinationRecordRoutes = require("./vaccination-record-route");
+// const vaccineRoutes = require("./vaccine-route");
+// const articleRoutes = require("./article-route");
+// const articleCategoryRoutes = require("./article-category-route");
 
 route.get("/", (req, res) => {
   res.json({
