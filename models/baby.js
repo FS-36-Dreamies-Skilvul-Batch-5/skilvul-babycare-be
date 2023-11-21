@@ -14,6 +14,12 @@ module.exports = (sequelize, DataTypes) => {
       Baby.belongsTo(models.User, { 
         foreignKey: 'user_id'
       });
+      Baby.hasMany(models.Nutrition_Record, { 
+        foreignKey: 'baby_id'
+      });
+      Baby.hasMany(models.Vaccination_Record, { 
+        foreignKey: 'baby_id'
+      });
     }
   }
   Baby.init({

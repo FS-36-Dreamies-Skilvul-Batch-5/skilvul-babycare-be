@@ -10,7 +10,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       baby_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Babies',
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       vaccine_id: {
         type: Sequelize.INTEGER
