@@ -18,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   Nutrition_Record.init({
     baby_id: DataTypes.INTEGER,
-    weight: DataTypes.INTEGER,
-    height: DataTypes.INTEGER,
-    head_circumference: DataTypes.INTEGER,
+    weight: DataTypes.FLOAT,
+    height: DataTypes.FLOAT,
+    head_circumference: DataTypes.FLOAT,
     growth_date: DataTypes.DATEONLY
   }, {
     sequelize,
