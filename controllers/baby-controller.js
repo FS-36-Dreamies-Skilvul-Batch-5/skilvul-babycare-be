@@ -1,4 +1,4 @@
-const { Baby, Nutrition_Record } = require("../models");
+const { Baby, Nutrition_Record, Vaccination_Record } = require("../models");
 
 module.exports = {
   getAllBaby: async (req, res) => {
@@ -32,6 +32,31 @@ module.exports = {
       } else {
         res.status(404).json({
           message: `Fail to get baby's nutrition record`,
+        });
+      }
+    } catch (error) {
+      res.status(500).json({
+        message: "Internal Server Error",
+        error: error,
+      });
+    }
+  },
+  getBabyVaccinationRecords: async (req, res) => {
+    try {
+      const vaccinationRecords = await Vaccination_Record.findAll({
+        where: {
+          baby_id: req.params.id,
+        },
+      });
+
+      if (vaccinationRecords) {
+        res.status(200).json({
+          message: `Success to get baby's vaccination record`,
+          data: vaccinationRecords,
+        });
+      } else {
+        res.status(404).json({
+          message: `Fail to get baby's vaccination record`,
         });
       }
     } catch (error) {
