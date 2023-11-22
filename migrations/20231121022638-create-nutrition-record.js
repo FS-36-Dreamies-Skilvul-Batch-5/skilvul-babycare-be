@@ -19,13 +19,13 @@ module.exports = {
         onDelete: 'CASCADE',
       },
       weight: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       height: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       head_circumference: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       growth_date: {
         type: Sequelize.DATEONLY
