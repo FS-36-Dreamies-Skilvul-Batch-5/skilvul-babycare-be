@@ -27,13 +27,13 @@ module.exports = {
           process.env.JWT_KEY
         );
 
-        res.json({
+        res.status(200).json({
           message: "Login Successfull",
           userId: user.id,
           token: token,
         });
       } else {
-        res.json({
+        res.status(401).json({
           message: "Login Failed",
         });
       }
