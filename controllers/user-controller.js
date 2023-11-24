@@ -67,25 +67,6 @@ module.exports = {
       });
     }
   },
-  createUser: async (req, res) => {
-    let data = req.body;
-
-    try {
-      const hashPassword = bcrypt.hashSync(data.password, 10);
-      data.password = hashPassword;
-
-      await User.create(data);
-
-      res.status(201).json({
-        message: "Success to create new user",
-      });
-    } catch (error) {
-      res.status(500).json({
-        message: "Internal Server Error",
-        error: error,
-      });
-    }
-  },
   updateUser: async (req, res) => {
     let userId = req.params.id;
     let newData = req.body;

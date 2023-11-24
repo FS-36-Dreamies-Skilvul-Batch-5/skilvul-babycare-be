@@ -70,10 +70,11 @@ module.exports = {
     let data = req.body;
 
     try {
-      await Baby.create(data);
+      const baby = await Baby.create(data);
       
       res.status(201).json({
         message: "Success to create new baby",
+        data: baby
       });
     } catch (error) {
       res.status(500).json({
