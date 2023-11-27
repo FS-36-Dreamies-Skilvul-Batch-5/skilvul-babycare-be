@@ -12,7 +12,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit Hepatitis B yang bisa menyebabkan kerusakan hati.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir dengan berat lahir minimal 2 kg.
             </li>
@@ -36,7 +36,7 @@ module.exports = {
           grant_date_guide: "Saat Lahir",
           benefit: "Mencegah infeksi virus polio",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir
             </li>
@@ -52,7 +52,7 @@ module.exports = {
           benefit:
             "Melindungi bayi dan mencegah penyakit tuberkulosis (TB) yang disebabkan oleh bakteri Mycobacterium tuberculosis.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk bayi usia < 3 bulan yang belum mendapatkan imunisasi BCG
             </li>
@@ -71,7 +71,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit Hepatitis B yang bisa menyebabkan kerusakan hati.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir dengan berat lahir minimal 2 kg.
             </li>
@@ -96,7 +96,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi virus polio",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir
             </li>
@@ -112,7 +112,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi yang menyebabkan penyumbatan jalan nafas, infeksi  pertusis yang menyebabkan batuk rejan/ batuk 100 hari serta infeksi tetanus",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Semua anak yang belum imunisasi DTP, diberikan min. Usia 6 minggu
             </li>
@@ -137,7 +137,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi virus Hib yang menyebabkan meningitis (infeksi/radang selaput otak) dan pneumonia (radang paru).",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Semua anak yang belum diberikan imunisasi Hib
             </li>
@@ -153,7 +153,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit pneumonia (radang paru) akibat infeksi pneumokokus.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak yang belum pernah imunisasi PCV mulai usia 6 minggu.
             </li>
@@ -172,7 +172,7 @@ module.exports = {
           benefit:
             "Mencegah diare akibat rotavirus",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi berusia 2-8 bulan yang belum diberikan imunisasi rotavirus.
             </li>
@@ -194,7 +194,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit Hepatitis B yang bisa menyebabkan kerusakan hati",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir dengan berat lahir minimal 2 kg.
             </li>
@@ -219,7 +219,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi yang menyebabkan penyumbatan jalan nafas, infeksi  pertusis yang menyebabkan batuk rejan/ batuk 100 hari serta infeksi tetanus.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Semua anak yang belum imunisasi DTP, diberikan min. Usia 6 minggu
             </li>
@@ -241,7 +241,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi virus Hib yang menyebabkan meningitis (infeksi/radang selaput otak) dan pneumonia (radang paru).",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Semua anak yang belum diberikan imunisasi Hib.
             </li>
@@ -257,7 +257,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi virus polio",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir
             </li>
@@ -273,32 +273,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit Hepatitis B yang bisa menyebabkan kerusakan hati.",
           information: `
-          <ol>
-            <li>
-              Untuk semua bayi baru lahir dengan berat lahir minimal 2 kg.
-            </li>
-            <li>
-              Anak yang belum pernah imunisasi hepatitis B.
-            </li>
-            <li>
-              Pasien cuci darah/hemodialisis.
-            </li>
-            <li>
-              Pasien yang membutuhkan transfusi berulang.
-            </li>
-            <li>
-              Orang yang berisiko tertular hepatitis B  dari pekerjaan.
-            </li>
-          </ol>
-        `,
-        },
-        {
-          name: "Hepatitis B4",
-          grant_date_guide: "4 bulan",
-          benefit:
-            "Mencegah penyakit Hepatitis B yang bisa menyebabkan kerusakan hati.",
-          information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir dengan berat lahir minimal 2 kg.
             </li>
@@ -323,7 +298,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi virus polio",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi baru lahir
             </li>
@@ -339,7 +314,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi yang menyebabkan penyumbatan jalan nafas, infeksi pertusis yang menyebabkan batuk rejan/ batuk 100 hari serta infeksi tetanus.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Semua anak yang belum imunisasi DTP, diberikan min. Usia 6 minggu
             </li>
@@ -361,7 +336,7 @@ module.exports = {
           benefit:
             "Mencegah infeksi virus Hib yang menyebabkan meningitis (infeksi/radang selaput otak) dan pneumonia (radang paru).",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Semua anak yang belum diberikan imunisasi Hib.
             </li>
@@ -377,7 +352,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit pneumonia (radang paru) akibat infeksi pneumokokus.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak yang belum pernah imunisasi PCV mulai usia 6 minggu.
             </li>
@@ -396,7 +371,7 @@ module.exports = {
           benefit:
             "Mencegah diare akibat rotavirus",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi berusia 2-8 bulan yang belum diberikan imunisasi rotavirus.
             </li>
@@ -418,7 +393,7 @@ module.exports = {
           benefit:
             "Mencegah sakit berat akibat virus flu/influenza",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak usia > 6 bulan yang belum diberikan imunisasi influenza.
             </li>
@@ -443,7 +418,7 @@ module.exports = {
           benefit:
             "Mencegah diare akibat rotavirus",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua bayi berusia 2-8 bulan yang belum diberikan imunisasi rotavirus.
             </li>
@@ -465,7 +440,7 @@ module.exports = {
           benefit:
             "Mencegah sakit berat akibat virus flu/influenza",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak usia > 6 bulan yang belum diberikan imunisasi influenza.
             </li>
@@ -490,7 +465,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit radang/infeksi jaringan otak (ensefalitis) akibat virus Japanese Encephalitis (JE)",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak yang eblum mendapatkan imunisasi JE dengan usia min.9 bulan yang tinggal atau bepergian ke daerah endemis > 1 bulan. Booster diberikan 1-2 tahun kemudian.
             </li>
@@ -503,7 +478,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit campak (Measles) yang dapat mengakibatkan komplikasi radang paru dan radang otak, gondongan (Mumps), dan campak jerman (Rubella).",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak yang belum pernah imunisasi MR/MMR dengan usia min. 9 bulan.
             </li>
@@ -531,7 +506,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit pneumonia (radang paru) akibat infeksi pneumokokus.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak yang belum pernah imunisasi PCV mulai usia 6 minggu.
             </li>
@@ -550,7 +525,7 @@ module.exports = {
           benefit:
             "Mencegah penyakit cacar air (varisela) akibat infeksi virus Varicella Zoster.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak yang belum pernah imunisasi varisela dengan usia min. 12 bulan.
             </li>
@@ -570,9 +545,10 @@ module.exports = {
           benefit:
             "Mencegah penyakit Hepatitis (radang hati) akibat infeksi virus Hepatitis A.",
           information: `
-          <ol>
+          <ol class="list-decimal">
             <li>
               Untuk semua anak yang belum pernah imunisasi hepatitis A atau tinggal di daerah endemis dengan usia min. 12 bulan.
+
             </li>
             <li>
               Penderita penyakit kronis.
