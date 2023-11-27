@@ -29,7 +29,16 @@ module.exports = {
       },
       grant_date: {
         type: Sequelize.DATEONLY
-      }
+      },
+      vaccine_brand: {
+        type: Sequelize.STRING
+      },
+      vaccine_location: {
+        type: Sequelize.STRING
+      },
+      vaccine_batch_number: {
+        type: Sequelize.STRING
+      },
     });
   },
   async down(queryInterface, Sequelize) {

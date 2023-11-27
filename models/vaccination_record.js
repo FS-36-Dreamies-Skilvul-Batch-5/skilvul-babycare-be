@@ -22,7 +22,10 @@ module.exports = (sequelize, DataTypes) => {
   Vaccination_Record.init({
     baby_id: DataTypes.INTEGER,
     vaccine_id: DataTypes.INTEGER,
-    grant_date: DataTypes.DATEONLY
+    grant_date: DataTypes.DATEONLY,
+    vaccine_brand: DataTypes.STRING,
+    vaccine_location: DataTypes.STRING,
+    vaccine_batch_number: DataTypes.STRING
   }, {
     sequelize,
     timestamps: false,
