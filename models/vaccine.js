@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   Vaccine.init({
     name: DataTypes.STRING,
     grant_date_guide: DataTypes.STRING,
+    benefit: DataTypes.TEXT,
     information: DataTypes.TEXT
   }, {
     sequelize,

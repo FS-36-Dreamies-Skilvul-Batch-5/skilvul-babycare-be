@@ -15,6 +15,9 @@ module.exports = {
       grant_date_guide: {
         type: Sequelize.STRING
       },
+      benefit: {
+        type: Sequelize.TEXT
+      },
       information: {
         type: Sequelize.TEXT
       }
