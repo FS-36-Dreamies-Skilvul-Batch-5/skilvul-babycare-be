@@ -78,8 +78,12 @@ module.exports = {
           error: "User not Found",
         });
       } else {
-        const hashPassword = bcrypt.hashSync(newData.password, 10);
-        newData.password = hashPassword;
+        if(newData.password == ""){
+          newData.password = existingUser.password;
+        } else {
+          const hashPassword = bcrypt.hashSync(newData.password, 10);
+          newData.password = hashPassword;
+        }
 
         const updatedUser = await User.update(newData, {
           where: {
