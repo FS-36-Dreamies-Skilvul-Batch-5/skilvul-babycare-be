@@ -38,8 +38,6 @@ module.exports = {
       });
     }
   },
-  
-  
   getArticleById: async (req, res) => {
     try {
       const article = await Article.findOne({
