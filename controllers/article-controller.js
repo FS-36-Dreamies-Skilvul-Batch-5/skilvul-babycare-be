@@ -8,7 +8,7 @@ module.exports = {
   getAllArticle: async (req, res) => {
     try {
       const page = parseInt(req.query.page, 10) || 1;
-      const pageSize = 6;
+      const pageSize = parseInt(req.query.pageSize, 10) || 6;
   
       const { count, rows: articles } = await Article.findAndCountAll({
         include: {
