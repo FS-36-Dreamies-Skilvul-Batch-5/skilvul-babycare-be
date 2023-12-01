@@ -18,20 +18,42 @@ module.exports = {
   },
   getBabyNutritionRecords: async (req, res) => {
     try {
-      const nutritionRecords = await Nutrition_Record.findAll({
-        where: {
-          baby_id: req.params.id,
-        },
-      });
+      let nutritionRecords;
+  
+      if (req.query.page) {
+        const page = parseInt(req.query.page, 10) || 1;
+        const pageSize = 10;
+  
+        const { count, rows } = await Nutrition_Record.findAndCountAll({
+          where: {
+            baby_id: req.params.id,
+          },
+          limit: pageSize,
+          offset: (page - 1) * pageSize,
+        });
 
-      if (nutritionRecords) {
+        nutritionRecords = rows;
+        const totalPages = Math.ceil(count / pageSize);
+
         res.status(200).json({
-          message: `Success to get baby's nutrition record`,
+          message: `Success to get baby's nutrition record with pagination`,
           data: nutritionRecords,
+          pagination: {
+            page: page,
+            pageSize: pageSize,
+            totalPages: totalPages,
+          },
         });
       } else {
-        res.status(404).json({
-          message: `Fail to get baby's nutrition record`,
+        nutritionRecords = await Nutrition_Record.findAll({
+          where: {
+            baby_id: req.params.id,
+          },
+        });
+
+        res.status(200).json({
+          message: `Success to get baby's nutrition record without pagination`,
+          data: nutritionRecords,
         });
       }
     } catch (error) {
@@ -41,6 +63,32 @@ module.exports = {
       });
     }
   },
+  
+  // getBabyNutritionRecords: async (req, res) => {
+  //   try {
+  //     const nutritionRecords = await Nutrition_Record.findAll({
+  //       where: {
+  //         baby_id: req.params.id,
+  //       },
+  //     });
+
+  //     if (nutritionRecords) {
+  //       res.status(200).json({
+  //         message: `Success to get baby's nutrition record`,
+  //         data: nutritionRecords,
+  //       });
+  //     } else {
+  //       res.status(404).json({
+  //         message: `Fail to get baby's nutrition record`,
+  //       });
+  //     }
+  //   } catch (error) {
+  //     res.status(500).json({
+  //       message: "Internal Server Error",
+  //       error: error,
+  //     });
+  //   }
+  // },
   getBabyVaccinationRecords: async (req, res) => {
     try {
       const vaccinationRecords = await Vaccination_Record.findAll({
