@@ -10,7 +10,7 @@ module.exports = {
       const articles = await Article.findAll({
         include: {
           model: Article_Category,
-          attributes: ["id", "name"], // Specify the attributes you want to include from the Category model
+          attributes: ["id", "name"],
         },
       });
 
@@ -31,6 +31,10 @@ module.exports = {
         where: {
           id: req.params.id,
         },
+        include: {
+          model: Article_Category,
+          attributes: ["id", "name"],
+        }
       });
 
       if (article) {
