@@ -25,7 +25,7 @@ const upload = multer({ storage: storage });
 
 route.get("/", getAllUser);
 route.get("/:id", verifyToken, getUserById);
-route.get("/:id/baby", upload.single("img_url"), verifyToken, getUserBaby);
+route.get("/:id/baby", verifyToken, getUserBaby);
 route.put("/:id", upload.single("img_url"), verifyToken, updateUser);
 route.delete("/:id", verifyToken, deleteUser);
 
