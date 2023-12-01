@@ -85,6 +85,10 @@ module.exports = {
           newData.password = hashPassword;
         }
 
+        if (req.file) {
+          newData.img_url = req.file.filename;
+        }
+
         const updatedUser = await User.update(newData, {
           where: {
             id: userId,
