@@ -7,16 +7,29 @@ const publicArticlesPath = path.join(basePath, 'public/articles');
 module.exports = {
   getAllArticle: async (req, res) => {
     try {
-      const articles = await Article.findAll({
+      const page = parseInt(req.query.page, 10) || 1;
+      const pageSize = 6;
+  
+      const { count, rows: articles } = await Article.findAndCountAll({
         include: {
           model: Article_Category,
           attributes: ["id", "name"],
         },
+        order: [['posted_on', 'DESC']],
+        limit: pageSize,
+        offset: (page - 1) * pageSize,
       });
-
+  
+      const totalPages = Math.ceil(count / pageSize);
+  
       res.status(200).json({
         message: "Success get all articles",
         data: articles,
+        pagination: {
+          page: page,
+          pageSize: pageSize,
+          totalPages: totalPages,
+        },
       });
     } catch (error) {
       res.status(500).json({
@@ -25,6 +38,8 @@ module.exports = {
       });
     }
   },
+  
+  
   getArticleById: async (req, res) => {
     try {
       const article = await Article.findOne({
@@ -34,7 +49,7 @@ module.exports = {
         include: {
           model: Article_Category,
           attributes: ["id", "name"],
-        }
+        },
       });
 
       if (article) {
