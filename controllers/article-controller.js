@@ -79,13 +79,6 @@ module.exports = {
           });
         }
 
-        // res.status(200).json({
-        //   success: true,
-        //   message: "Uploaded",
-        //   data: result,
-        // });
-
-        // Make Article
         const newData = req.body;
         const currentDate = new Date();
         const formattedDate = currentDate.toISOString().split('T')[0];
@@ -134,12 +127,6 @@ module.exports = {
                   message: "Error on uploading file",
                 });
               }
-      
-              // res.status(200).json({
-              //   success: true,
-              //   message: "Uploaded",
-              //   data: result,
-              // });
       
               newData.img_url = result.secure_url;
       
