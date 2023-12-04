@@ -1,27 +1,24 @@
 const { Article, Article_Category } = require("../models");
-const fs = require('fs');
-const path = require('path');
-const basePath = path.join(__dirname, '..');
-const publicArticlesPath = path.join(basePath, 'public/articles');
+const cloudinary = require("../utils/cloudinary");
 
 module.exports = {
   getAllArticle: async (req, res) => {
     try {
       const page = parseInt(req.query.page, 10) || 1;
       const pageSize = parseInt(req.query.pageSize, 10) || 6;
-  
+
       const { count, rows: articles } = await Article.findAndCountAll({
         include: {
           model: Article_Category,
           attributes: ["id", "name"],
         },
-        order: [['posted_on', 'DESC']],
+        order: [["posted_on", "DESC"]],
         limit: pageSize,
         offset: (page - 1) * pageSize,
       });
-  
+
       const totalPages = Math.ceil(count / pageSize);
-  
+
       res.status(200).json({
         message: "Success get all articles",
         data: articles,
@@ -68,34 +65,54 @@ module.exports = {
     }
   },
   createArticle: async (req, res) => {
-    const image = req.file ? req.file.filename : null;
-    const newData = req.body;
-    const currentDate = new Date();
-    const formattedDate = currentDate.toISOString().split('T')[0];
+    cloudinary.uploader.upload(
+      req.file.path,
+      {
+        folder: "articles",
+      },
+      async function (err, result) {
+        if (err) {
+          console.log(err);
+          return res.status(500).json({
+            success: false,
+            message: "Error on uploading file",
+          });
+        }
+
+        // res.status(200).json({
+        //   success: true,
+        //   message: "Uploaded",
+        //   data: result,
+        // });
+
+        // Make Article
+        const newData = req.body;
+        const currentDate = new Date();
+        const formattedDate = currentDate.toISOString().split('T')[0];
     
-    newData.posted_on = formattedDate;
-    newData.img_url = image;
+        newData.posted_on = formattedDate;
+        newData.img_url = result.secure_url;
 
-    console.log(newData);
-
-    try {
-      await Article.create(newData);
-
-      res.status(201).json({
-        message: "Success to create a new article",
-      });
-    } catch (error) {
-      console.log(error);
-      res.status(500).json({
-        message: "Internal Server Error from Inside",
-        error: error,
-      });
-    }
+        try {
+          await Article.create(newData);
+    
+          res.status(201).json({
+            message: "Success to create a new article",
+          });
+        } catch (error) {
+          console.log(error);
+          res.status(500).json({
+            message: "Internal Server Error from Inside",
+            error: error,
+          });
+        }
+      }
+    );
   },
   updateArticle: async (req, res) => {
     const articleId = req.params.id;
-    const newData = req.body;
-  
+    let newData = req.body;
+
     try {
       const existingArticle = await Article.findByPk(articleId);
       if (!existingArticle) {
@@ -103,20 +120,62 @@ module.exports = {
           error: "Article not Found",
         });
       } else {
-        if (req.file) {
-          newData.img_url = req.file.filename;
-        }
-  
-        const updatedArticle = await Article.update(newData, {
-          where: {
-            id: articleId,
-          },
-        });
-  
-        if (updatedArticle) {
-          res.status(200).json({
-            message: "Success to update the article",
+        if(req.file){
+          cloudinary.uploader.upload(
+            req.file.path,
+            {
+              folder: "articles",
+            },
+            async function (err, result) {
+              if (err) {
+                console.log(err);
+                return res.status(500).json({
+                  success: false,
+                  message: "Error on uploading file",
+                });
+              }
+      
+              // res.status(200).json({
+              //   success: true,
+              //   message: "Uploaded",
+              //   data: result,
+              // });
+      
+              newData.img_url = result.secure_url;
+      
+              try {
+                const updatedArticle = await Article.update(newData, {
+                  where: {
+                    id: articleId,
+                  },
+                });
+
+                if (updatedArticle) {
+                  res.status(200).json({
+                    message: "Success to update the article",
+                  });
+                }
+              } catch (error) {
+                console.log(error);
+                res.status(500).json({
+                  message: "Internal Server Error",
+                  error: error,
+                });
+              }
+            }
+          );
+        } else {
+          const updatedArticle = await Article.update(newData, {
+            where: {
+              id: articleId,
+            },
           });
+  
+          if (updatedArticle) {
+            res.status(200).json({
+              message: "Success to update the article",
+            });
+          }
         }
       }
     } catch (error) {
@@ -128,36 +187,26 @@ module.exports = {
   },
   deleteArticle: async (req, res) => {
     const articleId = req.params.id;
-  
+
     try {
       const existingArticle = await Article.findByPk(articleId);
-  
+
       if (!existingArticle) {
         return res.status(404).json({
-          message: 'Article not found',
+          message: "Article not found",
         });
       }
 
-      const imageName = existingArticle.img_url;
-
       await existingArticle.destroy();
 
-      if (imageName) {
-        const imagePath = path.join(publicArticlesPath, imageName);
-
-        if (fs.existsSync(imagePath)) {
-          fs.unlinkSync(imagePath);
-        }
-      }
-  
       return res.status(200).json({
-        message: 'Article deleted successfully',
+        message: "Article deleted successfully",
       });
     } catch (error) {
       res.status(500).json({
-        message: 'Internal Server Error',
+        message: "Internal Server Error",
         error: error,
       });
     }
-  }
+  },
 };
