@@ -1,5 +1,6 @@
 const { User, Baby } = require("../models");
 const bcrypt = require("bcrypt");
+const cloudinary = require("../utils/cloudinary");
 
 module.exports = {
   getAllUser: async (req, res) => {
@@ -78,27 +79,62 @@ module.exports = {
           error: "User not Found",
         });
       } else {
-        if(newData.password == ""){
-          newData.password = existingUser.password;
-        } else {
-          const hashPassword = bcrypt.hashSync(newData.password, 10);
-          newData.password = hashPassword;
-        }
-
         if (req.file) {
-          newData.img_url = req.file.filename;
-        }
-
-        const updatedUser = await User.update(newData, {
-          where: {
-            id: userId,
-          },
-        });
-
-        if (updatedUser) {
-          res.status(200).json({
-            message: "Success to update the user data",
+          cloudinary.uploader.upload(
+            req.file.path,
+            {
+              folder: "users",
+            },
+            async function (err, result) {
+              if (err) {
+                console.log(err);
+                return res.status(500).json({
+                  success: false,
+                  message: "Error on uploading file",
+                });
+              }
+      
+              newData.img_url = result.secure_url;
+      
+              if(newData.password == ""){
+                newData.password = existingUser.password;
+              } else {
+                const hashPassword = bcrypt.hashSync(newData.password, 10);
+                newData.password = hashPassword;
+              }
+      
+              const updatedUser = await User.update(newData, {
+                where: {
+                  id: userId,
+                },
+              });
+      
+              if (updatedUser) {
+                res.status(200).json({
+                  message: "Success to update the user data",
+                });
+              }
+            }
+          );
+        } else {
+          if(newData.password == ""){
+            newData.password = existingUser.password;
+          } else {
+            const hashPassword = bcrypt.hashSync(newData.password, 10);
+            newData.password = hashPassword;
+          }
+  
+          const updatedUser = await User.update(newData, {
+            where: {
+              id: userId,
+            },
           });
+  
+          if (updatedUser) {
+            res.status(200).json({
+              message: "Success to update the user data",
+            });
+          }
         }
       }
     } catch (error) {

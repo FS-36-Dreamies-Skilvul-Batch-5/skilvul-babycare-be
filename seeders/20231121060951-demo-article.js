@@ -11,7 +11,7 @@ module.exports = {
           title: "5 Kebiasaan Bayi Baru Lahir yang Harus Diketahui Oleh Ibunda",
           slug: "",
           author: "admin",
-          img_url: "5-kebiasaan-bayi.webp",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689271/articles/sgku78o9cixx8vclb4tr.webp",
           content: `<p>
         Sebagai orang tua baru, Ayah Bunda mungkin memiliki banyak pertanyaan terkait kondisi, kebiasaan, dan tumbuh kembang bayi AyBun yang baru lahir, apakah ia berkembang dengan normal atau tidak. Nah, untuk memahaminya, perlu AyBun ketahui bahwa orang tua dapat memperhatikan kebiasaan bayi sejak baru dilahirkan. Ada beberapa kebiasaan bayi baru lahir (new born) berusia 0 hingga 6 bulan. Namun, kendati merupakan hal yang wajar, beberapa kebiasaan dapat menjadi tanda bahaya bagi si Kecil jika sudah mulai terlihat berlebihan. Di sini lah pentingnya peran AyBun untuk selalu mengawasi si Kecil. Untuk lebih jelasnya, simak kebiasaan bayi dari usia 0 hingga 6 bulan seperti di bawah ini, termasuk gejala, cara mengatasi, hingga tanda-tanda bahayanya!
       </p>
@@ -44,7 +44,7 @@ module.exports = {
           title: "Cara Merawat Bayi yang Baik dan Benar",
           slug: "",
           author: "admin",
-          img_url: "article-cara-merawat-bayi.webp",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689271/articles/zzjbdggrbbfuow9kkl8v.webp",
           content: `  <p>
         Setelah sembilan bulan berada di dalam kandungan, kini akhirnya si kecil dapat menghirup udara yang sama dengan Mama dan Papa. Rasa senang, lega, dan haru akan bercampur aduk saat melihat kehadirannya di dunia. Namun, bagi sebagian wanita yang baru pertama menjadi ibu, rasa khawatir juga mungkin kerap meliputi dirinya. Pertanyaan-pertanyaan, bagaimana cara merawat bayi yang benar dan sehat mungkin muncul di benak Mama. Namun, Mama tidak perlu khawatir, ulasan berikut ini akan memberikan panduan cara merawat bayi yang baik dan benar.
       </p>
@@ -81,7 +81,7 @@ module.exports = {
           title: "Stimulasi yang Tepat agar Bayi Cepat Duduk dan Merangkak",
           slug: "",
           author: "admin",
-          img_url: "stimulasi-duduk-merangkak.jpg",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689270/articles/c1vomgsxh73uyonfssx0.jpg",
           content: `  <p>
         Setiap bayi mempelajari hal baru setiap harinya, mereka berkembang begitu cepat. Sebelum bisa duduk atau merangkak, bayi menguasai cara untuk mengangkat kepala mereka terlebih dahulu pada usia 2 bulan. Kemudian pada usia 4 bulan, bayi dapat mengangkat kepalanya tanpa bantuan dari orang tua. Menginjak usia 6 bulan, bayi seharusnya bisa duduk dengan bantuan. Di saat yang sama, bayi juga akan menggoyangkan tangan dan lututnya, ini adalah langkah awal untuk merangkak. Lalu, pada usia 9 bulan bayi sudah bisa duduk tanpa bantuan dan merangkak. Beberapa bayi mungkin akan menguasai merangkak dengan menyeret diri mereka sepanjang lantai dengan lengannya. Supaya bayi dapat menguasai duduk dan merangkak, Ayah Bunda perlu memberikan si kecil stimulasi. Di bawah ini adalah cara menstimulasi bayi agar cepat duduk dan merangkak:
       </p>
@@ -114,7 +114,7 @@ module.exports = {
           title: "5 Ide Stimulasi Sensori Latih Kemandirian",
           slug: "",
           author: "admin",
-          img_url: "article-lima-ide-stimulasi.webp",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689269/articles/knm2adtyutw0hxdxyymd.webp",
           content: `  <p>
         Sensory play adalah aktivitas yang melibatkan indera bayi, termasuk indera penglihatan, pendengaran, penciuman, perasa, dan sentuhan. Selain itu, sensory play juga merupakan aktivitas yang melibatkan gerakan dan keseimbangan bayi. Maka dari itu, sensory play untuk bayi bukan hanya menyenangkan tetapi juga dapat memberikan manfaat yang luar biasa untuk tumbuh kembangnya. Sebelum menerapkan metode sensory play pada Si Kecil, Moms perlu mengetahui metode pembelajaran yang satu ini terlebih dahulu. Untuk itu, yuk simak informasi lengkap mengenai 5 ide stimulasi sensori yang bisa melatih bayi anda!
       </p>
@@ -147,7 +147,7 @@ module.exports = {
           title: "Anak Susah Makan? Ini Tips Mengatasinya",
           slug: "",
           author: "admin",
-          img_url: "article-anak-susah-makan.webp",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689271/articles/w5wj25i4kvtzzcprjbuv.webp",
           content: `  <p>
         Pada masa pertumbuhan, si Kecil bisa saja memiliki kendala saat makan. Sangat umum jika nafsu makannya cenderung naik turun dan bergantung pada variasi aktivitasnya. Tidak seperti saat bayi yang pertumbuhannya pesat, saat si Kecil memasuki usia satu tahun perkembangannya mungkin terasa lebih lambat. Pada balita misalnya, penyebab naik turunnya nafsu makan bisa diakibatkan oleh kondisi fisik, hingga terlalu tertarik dengan dunia baru di sekeliling sehingga tidak terlalu tertarik pada makanannya. Namun, terlepas dari beragam alasan di atas, sebagai orang tua tentu kita perlu terus mengupayakan mencukupi pemenuhan nutrisi harian agar si Kecil tumbuh kembangnya tidak terhambat. Berikut merupakan beberapa tips yang bisa dilakukan untuk mengatasi anak susah makan dan membuat meal time lebih menarik buat si Kecil.
       </p>
@@ -180,7 +180,7 @@ module.exports = {
           title: "Kenapa Orang Tua Perlu Selektif Memilih Bath Toys",
           slug: "",
           author: "admin",
-          img_url: "bath-toys.jpg",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689269/articles/pzl0mnj7wtyhabpixz83.webp",
           content: `  <p>
         Bath toys adalah mainan yang dirancang khusus untuk digunakan di dalam bak mandi saat anak mandi. Mainan ini dibuat dari bahan yang tahan air dan aman untuk digunakan di lingkungan basah. Bath toys memiliki berbagai bentuk dan ukuran, termasuk boneka berbentuk hewan, kapal kecil, cetakan berbentuk binatang, bola-bola berwarna, dan masih banyak lagi. Nah, untuk memilih bath toys, orang tua perlu selektif karena ada beberapa alasan penting yang dipertimbangkan, antara lain:
       </p>
@@ -212,7 +212,7 @@ module.exports = {
           title: "Cara Memandikan si Kecil",
           slug: "",
           author: "admin",
-          img_url: "cara-memandikan.webp",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689270/articles/act0ojobgvxvfq40ikwt.webp",
           content: `  <p>
         Cara memandikan bayi adalah salah satu kemampuan yang wajib dimiliki oleh setiap orang tua. Namun, tidak sedikit pasangan, terutama orang tua baru, yang masih merasa gugup ketika memandikan buah hatinya. Memandikan bayi memang tidak boleh dilakukan sembarangan. Berbagai hal perlu diperhatikan dan Anda pun dituntut untuk lebih hati-hati. Misalnya, hindari memandikan bayi setelah ia selesai menyusu atau makan agar bayi tidak muntah. Oleh karena itu, mari simak bagaimana cara memandikan bayi yang tepat. Berikut ini adalah langkah-langkah atau cara memandikan bayi yang dapat Anda lakukan:
       </p>
@@ -258,7 +258,7 @@ module.exports = {
           title: "Bagaimana Cara Memahami Tangisan Bayi",
           slug: "",
           author: "admin",
-          img_url: "tangisan-bayi.jpg",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689270/articles/tmtwlvmtn6qaabfyjrxv.webp",
           content: `  <p>
           Tangisan bayi adalah salah satu cara utama bagi mereka untuk berkomunikasi dengan orang-orang di sekitarnya. Namun, bagi sebagian orang tua, memahami apa yang bayi mereka coba sampaikan melalui tangisan bisa menjadi tantangan. Berikut beberapa tanda dan petunjuk yang dapat membantu Anda mengenali tangisan bayi dan merespons dengan tepat, sehingga Anda dapat memberikan perawatan yang sesuai dan memenuhi kebutuhan bayi Anda.
         </p>
@@ -291,7 +291,7 @@ module.exports = {
           title: "Panduan skin to skin dalam Perawatan Bayi",
           slug: "",
           author: "admin",
-          img_url: "panduan-skin-to skin.webp",
+          img_url: "https://res.cloudinary.com/dbvjnvtvz/image/upload/v1701689270/articles/ewtuzftxlyx6ud6emosv.webp",
           content: `  <p>
           Pertemuan pertama antara seorang bayi dan orang tua merupakan momen yang sangat penting. Salah satu cara yang dianjurkan oleh para ahli adalah melakukan metode skin-to-skin atau kulit ke kulit. Metode ini tidak hanya menghangatkan bayi, tetapi juga membawa sejumlah manfaat luar biasa bagi perkembangan fisik dan emosionalnya. Berikut cara melakukan skin-to-skin dengan benar :
         </p>
